@@ -35,7 +35,7 @@ for event in longpoll.listen():
             elif event.from_chat: #Если написали в Беседе
                 vk.messages.send( #Отправляем собщение
                     chat_id=event.chat_id,
-                    message='Балабол точками
+                    message='Балабол точками'
 import datetime
 vk.messages.send(
     user_id=event.user_id,
