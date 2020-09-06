@@ -1,9 +1,10 @@
 import vk_api
- 
 import requests
- 
- 
- 
+import VkLongPoll
+from vk_api.longpoll
+import datetime
+import wikipedia
+
 session = request.Session()
  
 login, password = 'Ваш логин, почта и номер', 'Ваш пароль'
@@ -20,7 +21,7 @@ except vk_api.AuthError as error_msg:
  
     return
 
-from vk_api.longpoll import VkLongPoll, VkEventType
+VkEventType
 longpoll = VkLongPoll(vk_session)
 vk = vk_session.get_api()
 for event in longpoll.listen():
@@ -36,7 +37,7 @@ for event in longpoll.listen():
                 vk.messages.send( #Отправляем собщение
                     chat_id=event.chat_id,
                     message='Балабол точками'
-import datetime
+
 vk.messages.send(
     user_id=event.user_id,
     message='Московское время: ' + str(now.strftime("%H:%M"))
@@ -54,7 +55,7 @@ vk.messages.send(
     attachment=','.join(attachments),
     message='И зачем мне это🤔'
 
-import wikipedia #Модуль Википедии
+#Модуль Википедии
 wikipedia.set_lang("RU")
 if event.text == '.вики' or event.text == 'Вики' or event.text == '.Вики' or event.text == 'вики' or event.text == '. вики' or event.text == 'wikipedia' or event.text == 'википедия' or event.text == 'wiki': #если нам пришло сообщение с текстом Википедия или Вики или ... или wiki
     if event.from_user: #Если написали в KC
