@@ -6,4 +6,4 @@ pkg install python
 nano LongPoll.py
 Вводим Логин и Пароль от странички вк
 И запускаем командой python3 LongPoll.py
-Делал vk.com/mensik232 (Кирилл Эрских)
+Делал https//:vk.com/mensik232 (Кирилл Эрских)
